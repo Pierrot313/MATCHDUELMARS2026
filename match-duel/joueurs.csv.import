@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bkgsib7c4a6o1"
+valid=false
+
+[deps]
+
+source_file="res://joueurs.csv"
+
+[params]
+
+compress=true
+delimiter=0

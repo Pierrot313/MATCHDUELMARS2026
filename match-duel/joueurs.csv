@@ -1,0 +1,157 @@
+﻿;pays;note;poste;légende;numéro
+zidane;FRA;93;milieu;oui;1/14
+platini;FRA;92;milieu;oui;2/14
+mbappe;FRA;89;attaquant;non;3/14
+varane;FRA;85;defenseur;non;4/14
+pogba;FRA;88;milieu;non;5/14
+kante;FRA;88;milieu;non;6/14
+benzema;FRA;88;attaquant;non;7/14
+cherki;FRA;81;milieu;non;8/14
+dembele;FRA;85;attaquant;non;9/14
+doue;FRA;81;attaquant;non;10/14
+griezmann;FRA;88;attaquant;non;11/14
+saliba;FRA;84;defenseur;non;12/14
+maignan;FRA;85;gardien;non;13/14
+;;;;;
+pele;BRE;95;attaquant;oui;1/11
+ronaldo;BRE;94;attaquant;oui;2/11
+neymar;BRE;89;attaquant;non;3/11
+vinicius;BRE;88;attaquant;non;4/11
+casemiro;BRE;85;milieu;non;5/11
+marquinhos;BRE;86;defenseur;non;6/11
+alisson;BRE;85;gardien;non;7/11
+endrick;BRE;80;attaquant;non;8/11
+guimaraes;BRE;83;milieu;non;9/11
+raphina;BRE;84;attaquant;non;10/11
+andre santos;BRE;80;milieu;non;11/11
+;;;;;
+maradonna;ARG;95;attaquant;oui;1/8
+messi;ARG;92;attaquant;non;2/8
+di maria;ARG;86;attaquant;non;3/8
+de paul;ARG;84;milieu;non;4/8
+otamendi;ARG;82;defenseur;non;5/8
+mac allister;ARG;84;milieu;non;6/8
+paredes;ARG;81;milieu;non;7/8
+garnacho;ARG;80;attaquant;non;8/8
+;;;;;
+iniesta;ESP;90;milieu;oui;1/12
+xavi;ESP;90;milieu;oui;2/12
+ramos;ESP;88;defenseur;non;3/12
+pedri;ESP;85;milieu;non;4/12
+yamal;ESP;84;attaquant;non;5/12
+zubimendi;ESP;82;milieu;non;6/12
+asencio;ESP;81;defenseur;non;7/12
+huijsen;ESP;81;defenseur;non;8/12
+morata;ESP;82;attaquant;non;9/12
+de gea;ESP;84;gardien;non;10/12
+rodri;ESP;86;milieu;non;11/12
+isco;ESP;82;milieu;non;12/12
+;;;;;
+matthaus;ALL;90;milieu;oui;1/8
+neuer;ALL;88;gardien;non;2/8
+wirtz;ALL;86;milieu;non;3/8
+musiala;ALL;86;milieu;non;4/8
+kimmich;ALL;87;defenseur;non;5/8
+rudiger;ALL;84;defenseur;non;6/8
+muller;ALL;85;attaquant;non;7/8
+gundogan;ALL;84;milieu;non;8/8
+;;;;;
+beckham;ANG;89;milieu;oui;1/11
+kane;ANG;88;attaquant;non;2/11
+bellingham;ANG;87;milieu;non;3/11
+rice;ANG;85;milieu;non;4/11
+saka;ANG;84;attaquant;non;5/11
+palmer;ANG;83;milieu;non;6/11
+rashford;ANG;81;attaquant;non;7/11
+foden;ANG;82;attaquant;non;8/11
+maguire;ANG;80;defenseur;non;9/11
+walker;ANG;81;defenseur;non;10/11
+pickford;ANG;82;gardien;non;11/11
+;;;;;
+buffon;ITA;91;gardien;oui;1/8
+maldini;ITA;92;defenseur;oui;2/8
+verratti;ITA;84;milieu;non;3/8
+barella;ITA;83;milieu;non;4/8
+donnaruma;ITA;87;gardien;non;5/8
+tonali;ITA;83;milieu;non;6/8
+bastoni;ITA;84;defenseur;non;7/8
+jorginho;ITA;82;milieu;non;8/8
+;;;;;
+chicharito;MEX;80;attaquant;non;1/4
+ochoa ;MEX;79;gardien;non;2/4
+lozano;MEX;79;attaquant;non;3/4
+raul jimenez;MEX;79;attaquant;non;4/4
+;;;;;
+hazard;BEL;89;attaquant;oui;1/5
+de bruyne;BEL;88;milieu;non;2/5
+courtois;BEL;88;gardien;non;3/5
+lukaku;BEL;83;attaquant;non;4/5
+meunier;BEL;79;defenseur;non;5/5
+;;;;;
+eusebio;POR;91;attaquant;oui;1/8
+ronaldo;POR;92;attaquant;non;2/8
+pepe;POR;84;defenseur;non;3/8
+fernandes;POR;85;milieu;non;4/8
+vitinha;POR;84;milieu;non;5/8
+mendes;POR;83;defenseur;non;6/8
+leao;POR;84;attaquant;non;7/8
+silva;POR;86;milieu;non;8/8
+;;;;;
+son;COR;85;attaquant;non;1/3
+kang in lee;COR;79;milieu;non;2/3
+kim in jae;COR;79;defenseur;non;3/3
+;;;;;
+hakimi;MAR;84;defenseur;non;1/5
+diaz;MAR;82;attaquant;non;2/5
+zyiech;MAR;81;attaquant;non;3/5
+bounou;MAR;82;gardien;non;4/5
+boufal;MAR;77;attaquant;non;5/5
+;;;;;
+ait nouri;ALG;82;defenseur;non;1/4
+mahrez;ALG;83;attaquant;non;2/4
+bensebaini ;ALG;79;defenseur;non;3/4
+bennacer;ALG;80;milieu;non;4/4
+;;;;;
+mane;SEN;85;attaquant;non;1/3
+jackson;SEN;79;attaquant;non;2/3
+koulibaly;SEN;82;defenseur;non;3/3
+;;;;;
+lewandowski;POL;88;attaquant;non;1/3
+szczesny;POL;82;gardien;non;2/3
+zielinski;POL;79;milieu;non;3/3
+;;;;;
+cruyff;PAY;91;attaquant;oui;1/6
+van dijk;PAY;88;defenseur;non;2/6
+de jong;PAY;84;milieu;non;3/6
+depay;PAY;82;attaquant;non;4/6
+frimpong;PAY;82;defenseur;non;5/6
+simons;PAY;81;milieu;non;6/6
+;;;;;
+modric;CRO;88;milieu;non;1/4
+perisic;CRO;83;attaquant;non;2/4
+gvardiol;CRO;82;defenseur;non;3/4
+kovacic;CRO;82;milieu;non;4/4
+;;;;;
+haaland;NOR;86;attaquant;non;1/3
+odegaard;NOR;84;milieu;non;2/3
+sorloth;NOR;79;attaquant;non;3/3
+;;;;;
+forlan;URU;89;attaquant;oui;1/5
+suarez;URU;86;attaquant;non;2/5
+valverde;URU;85;milieu;non;3/5
+cavani;URU;85;attaquant;non;4/5
+araujo;URU;80;defenseur;non;5/5
+;;;;;
+james;COL;82;milieu;non;1/3
+luis diaz;COL;81;attaquant;non;2/3
+cuadrado;COL;80;defenseur;non;3/3
+;;;;;
+kubo;JAP;79;attaquant;non;1/3
+mitoma;JAP;79;attaquant;non;2/3
+minamino;JAP;79;attaquant;non;3/3
+;;;;;
+salah;EGY;88;attaquant;non;1/1
+;;;;;
+zlatan;SUE;89;attaquant;oui;1/3
+gyokeres;SUE;81;attaquant;non;2/3
+isak;SUE;81;attaquant;non;3/3

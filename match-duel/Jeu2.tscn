@@ -1,0 +1,482 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs4av587kem8y"]
+
+[ext_resource type="Script" uid="uid://cpybh0lujnpaw" path="res://jeu.gd" id="1_pm7t7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pm7t7"]
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pm7t7"]
+bg_color = Color(0, 0.3254902, 0.80784315, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3b070"]
+font_size = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3b070"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 0.78431374)
+
+[node name="Jeu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_pm7t7")
+
+[node name="MainDuJoueur" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -149.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="MainAdversaire" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 150.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Tapis" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -75.0
+offset_right = 1.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="LigneAdversaire" type="HBoxContainer" parent="Tapis"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="LigneJoueur" type="HBoxContainer" parent="Tapis"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="MessageResultat" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -53.0
+offset_right = 234.0
+offset_bottom = 52.5
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_pm7t7")
+
+[node name="BoutonPasser" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 66.0
+grow_vertical = 0
+text = "PASSER"
+
+[node name="CompteurJoueur" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -235.0
+offset_right = -36.0
+offset_bottom = -173.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CompteurAdversaire" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 260.0
+offset_right = -36.0
+offset_bottom = 324.0
+grow_horizontal = 0
+
+[node name="Chrono" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 112.0
+offset_bottom = 56.0
+
+[node name="MenuDemarrage" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pm7t7")
+
+[node name="Label" type="Label" parent="MenuDemarrage"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 157.0
+offset_right = 947.0
+offset_bottom = 236.0
+text = "CHOISIS LE FORMAT DU MATCH"
+label_settings = SubResource("LabelSettings_3b070")
+
+[node name="BtnBO1" type="Button" parent="MenuDemarrage"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = -25.0
+offset_right = 375.0
+offset_bottom = 28.0
+grow_vertical = 2
+text = "Match rapide - Best of 1"
+
+[node name="BtnBO3" type="Button" parent="MenuDemarrage"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Classique - Best of 3"
+
+[node name="BtnBO5" type="Button" parent="MenuDemarrage"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -371.0
+offset_top = -25.0
+offset_right = -171.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Marathon - Best of 5"
+
+[node name="BtnOuvrirRegles" type="Button" parent="MenuDemarrage"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.5
+offset_top = -187.0
+offset_right = 61.5
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "RÈGLES DU JEU"
+
+[node name="BtnBonus" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 84.0
+offset_top = 522.0
+offset_right = 149.0
+offset_bottom = 572.0
+text = "BONUS"
+
+[node name="IndicateurBonusAdv" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 132.0
+offset_right = 1054.0
+offset_bottom = 172.0
+color = Color(0.80784315, 0.6666667, 0, 1)
+
+[node name="PanelJoker" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJoker"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnJokerVol" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "VOL UNE 
+CARTE"
+
+[node name="BtnJokerVolerBonus" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BtnJokerBoost" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "BOOST UNE 
+CARTE"
+
+[node name="BtnJokerEspion" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "REGARDE LA MAIN 
+ADVERSE"
+
+[node name="BtnJokerRemplacement" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "REMPLACEMENT
+(1-4 CARTES)"
+
+[node name="BtnRetourMenu" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -313.0
+offset_right = 118.0
+offset_bottom = -266.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "RETOUR AU MENU PRINCIPAL"
+
+[node name="BtnValiderEchange" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 910.0
+offset_top = 333.0
+offset_right = 1075.0
+offset_bottom = 364.0
+text = "VALIDER L'ECHANGE"
+
+[node name="BtnReglesInGame" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 1021.0
+offset_top = 588.0
+offset_right = 1091.0
+offset_bottom = 619.0
+text = "RÈGLES"
+
+[node name="PanelRegles" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3b070")
+
+[node name="TabContainer" type="TabContainer" parent="PanelRegles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="But du Jeu" type="Control" parent="PanelRegles/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelRegles/TabContainer/But du Jeu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[b][u]BUT DU JEU[/u][/b]
+
+- Le but du jeu est de remporter 1, 2 ou 3 manches contre l'adversaire selon le mode de jeu choisi.
+
+- Pour remporter une manche, la note cumulée des 11 meilleures cartes du joueur doit être supérieur à celle adverse.
+
+- En cas d'égalité lors d'une manche, aucun joueur ne gagne la manche"
+metadata/_edit_use_anchors_ = true
+
+[node name="Organisation" type="Control" parent="PanelRegles/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelRegles/TabContainer/Organisation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[b][u]1. DÉROULEMENT[/u][/b]
+Chaque joueur joue une carte à tour de rôle.
+Celui qui a la plus grosse note remporte la carte.
+En cas d'égalité, une bataille est jouée.
+
+[b][u]2. AVANTAGES DE POSTE (+2)[/u][/b]
+Si vous jouez le bon poste contre la carte adverse, vous gagnez [color=yellow]+2 points[/color] sur la confrontation entre les deux cartes :
+- [i]ATTAQUANT[/i] bat  [i]GARDIEN[/i]
+- [i]MILIEU[/i] bat  [i]DÉFENSEUR[/i]
+- [i]DÉFENSEUR[/i] bat  [i]ATTAQUANT[/i]
+- [i]GARDIEN[/i] bat  [i]MILIEU[/i]
+Cet avantage n'est pas actif lors des renforts et des batailles
+
+[b][u]3. RENFORTS[/u][/b]
+Lors d'un tour, si le premier joueur possède deux cartes de même nationalité dans sa main, qu'il joue le premier et est en situation défavorable (égalité ou défaite), il peut choisir de jouer la seconde carte de même nationalité. Les notes des deux cartes s'accumulent alors. Dans ce cas de figure où le premier joueur a placé un renfort, son adversaire a un droit de réponse et peut placer une deuxième carte de la même nationalité que la carte qu'il a joué s'il en possède une.
+
+[b][u]4. BATAILLES[/u][/b]
+- Si chaque joueur place une carte [i]LÉGENDES[/i] alors une Bataille est automatiquement déclenchée.
+- Si les deux joueurs placent une carte de même nationalité et que l'écart de note est inférieur ou égal à 4 alors une bataille est automatiquement déclenchée.
+
+Lors d'une bataille chaque joueur tire deux cartes dans la pioche et additionne leur note à celle de sa première carte. En cas d'une nouvelle égalité lors de la bataille, chaque joueur récupère les cartes de son camp.
+
+[b][u]5. CARTES BONUS[/u][/b]
+Les cartes bonus et leur utilisation sont expliquées dans l'onglet CARTES BONUS
+
+   "
+
+[node name="Cartes Bonus" type="Control" parent="PanelRegles/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelRegles/TabContainer/Cartes Bonus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Durant chaque manche, le joueur et son adversaire se voient distribuer un bonus aléatoire. Chaque joueur a connaissance de son propre bonus mais celui de l'adversaire reste inconnu jusqu'à son utilisation.
+
+Cet atout peut être utilisé une seule fois lors de n'importe quel tour de la manche. Un joueur ne peut utiliser son bonus qu'avant de placer sa carte joueur lors du tour.
+
+[b][u]Type de Bonus[/u][/b]
+
+- [b]Espionnage[/b] : le joueur voit la main de son adversaire pendant une durée de 5 secondes.
+
+- [b]Vol[/b] : le joueur voit 2 cartes joueur aléatoires de la main de son adversaire et peut échanger une carte de sa propre main avec l'une des 5 cartes de la main de son adversaires (ou 4 s'il est deuxième joueur lors du tour).
+
+- [b]Boost[/b] : en utilisant ce bonus, la carte joueur placée bénéficie d'un boost +3 cumulable avec le bonus de poste.
+
+- [b]Remplacement[/b] : le joueur choisit entre 1 et 4 cartes de sa main qui lui seront échangées avec 4 cartes de la pioche. Les joueurs échangés sont envoyés dans la pile de défausse.
+
+- [b]Joker[/b] : le joueur a le choix entre les 4 bonus précédemment présentés ou possède également la possibilité de voler le bonus adverse dans un cas précis (voir paragraphe : Vol de Bonus)
+
+[b][u]Vol de Bonus :[/u][/b]
+Voici les différentes situations qui peuvent se présenter et ce qu'elles permettent.
+- Si l'adversaire a déjà utilisé son bonus lors d'un tour précédent ou n'a pas encore utilisé son bonus, alors il n'est pas possible de le lui voler.
+- Si l'adversaire vient d'utiliser son bonus lors du tour en cours et que c'est à vous de jouer, vous pouvez le lui voler. Ainsi si c'est possible, le bonus de l'aversaire sera annulé et vous pourrez utiliser ce même bonus lors du tour en cours. Voici les différents cas de figure suivant le bonus adverse à voler : 
+	- Espionnage : il n'est pas possible de voler le bonus Espionnage.
+	- Vol : les cartes échangées entre les joueurs sont rendues à leur propriétaire initial sauf si la carte volée a été jouée par l'adversaire lors du
+	même tour, auquel cas il n'est pas possible de voler le bonus adverse.
+	- Boost : le bonus sur la carte adverse est annulée et c'est la carte du voleur qui bénéficie du boost +3.
+	- Remplacement : les cartes échangées par l'adversaire lui sont rendues. Dans le cas où l'adversaire a joué une carte reçue lors de l'échange,
+	celle-ci n'est pas reprise mais les autres cartes impliquées dans l'échange le sont
+
+
+       "
+
+[node name="BtnFermerRegles" type="Button" parent="PanelRegles"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1021.0
+offset_top = 588.0
+offset_right = 1091.0
+offset_bottom = 619.0
+text = "FERMER"
+
+[connection signal="pressed" from="BoutonPasser" to="." method="_on_bouton_passer_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBO1" to="." method="_on_btn_bo_1_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBO3" to="." method="_on_btn_bo_3_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBO5" to="." method="_on_btn_bo_5_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnOuvrirRegles" to="." method="_on_btn_ouvrir_regles_pressed"]
+[connection signal="pressed" from="BtnBonus" to="." method="_on_btn_bonus_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerVol" to="." method="_on_btn_joker_vol_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerVolerBonus" to="." method="_on_btn_joker_voler_bonus_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerBoost" to="." method="_on_btn_joker_boost_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerEspion" to="." method="_on_btn_joker_espion_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerRemplacement" to="." method="_on_btn_joker_remplacement_pressed"]
+[connection signal="pressed" from="BtnRetourMenu" to="." method="_on_btn_retour_menu_pressed"]
+[connection signal="pressed" from="BtnValiderEchange" to="." method="_on_btn_valider_echange_pressed"]
+[connection signal="pressed" from="BtnReglesInGame" to="." method="_on_btn_regles_in_game_pressed"]
+[connection signal="pressed" from="PanelRegles/BtnFermerRegles" to="." method="_on_btn_fermer_regles_pressed"]
