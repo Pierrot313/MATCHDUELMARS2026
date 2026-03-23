@@ -1,0 +1,282 @@
+[gd_scene load_steps=8 format=3 uid="uid://cd3kj2nh8w8or"]
+
+[ext_resource type="Script" uid="uid://v3qb2nnaqo3" path="res://stats.gd" id="1_lhas5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhas5"]
+bg_color = Color(0.44865668, 0.62428814, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wybp"]
+bg_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9064933, 0.9064934, 0.9064934, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7qmj"]
+bg_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ln6e6"]
+bg_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajuvn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ei7at"]
+
+[node name="Stats" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhas5")
+
+[node name="PanelFond" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.3529412, 0.92156863)
+
+[node name="TitreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -194.0
+offset_top = 10.0
+offset_right = 194.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 34
+text = "Statistiques de la Partie"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.97427
+offset_top = -247.0
+offset_right = 556.0292
+offset_bottom = -190.055
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lhas5")
+
+[node name="RecapGlobal" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RecapJoueur" type="Label" parent="PanelContainer/RecapGlobal"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RecapAdversaire" type="Label" parent="PanelContainer/RecapGlobal"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelSelectManche" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.13
+offset_top = -174.715
+offset_right = 213.87549
+offset_bottom = -151.71494
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sélectionner une manche pour voir les Tops 11"
+
+[node name="BoutonsManche" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.82
+offset_top = -141.0
+offset_right = 298.32
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -565.0
+offset_top = -104.56
+offset_right = 556.0
+offset_bottom = 317.44104
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatsManches" type="HBoxContainer" parent="Panel2"]
+layout_mode = 0
+offset_left = -11.0
+offset_right = 1141.0
+offset_bottom = 35.0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="RecapMancheJoueur" type="Label" parent="Panel2/StatsManches"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(576, 0)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RecapMancheAdversaire" type="Label" parent="Panel2/StatsManches"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(576, 0)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreTop11" type="HBoxContainer" parent="Panel2"]
+layout_mode = 0
+offset_left = -10.99
+offset_top = 35.0
+offset_right = 1141.01
+offset_bottom = 61.0
+
+[node name="ScoreJoueur" type="Label" parent="Panel2/ScoreTop11"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(576, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreAdversaire" type="Label" parent="Panel2/ScoreTop11"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(576, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ZoneTop11" type="HBoxContainer" parent="Panel2"]
+clip_contents = true
+layout_mode = 0
+offset_top = 68.935
+offset_right = 1121.0
+offset_bottom = 424.935
+
+[node name="Top11Joueur" type="VBoxContainer" parent="Panel2/ZoneTop11"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560.5, 0)
+layout_mode = 2
+
+[node name="LigneJou1" type="HBoxContainer" parent="Panel2/ZoneTop11/Top11Joueur"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 176)
+layout_mode = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="LigneJou2" type="HBoxContainer" parent="Panel2/ZoneTop11/Top11Joueur"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 176)
+layout_mode = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="Top11Adversaire" type="VBoxContainer" parent="Panel2/ZoneTop11"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560.5, 0)
+layout_mode = 2
+
+[node name="LigneAdv1" type="HBoxContainer" parent="Panel2/ZoneTop11/Top11Adversaire"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 176)
+layout_mode = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="LigneAdv2" type="HBoxContainer" parent="Panel2/ZoneTop11/Top11Adversaire"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 176)
+layout_mode = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="BtnFermerStats" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -107.0
+offset_top = -50.0
+offset_right = -33.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.9064933, 0.9064934, 0.9064933, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8wybp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i7qmj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ln6e6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ajuvn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ei7at")
+text = "FERMER"
+
+[connection signal="pressed" from="BtnFermerStats" to="." method="_on_btn_fermer_stats_pressed"]

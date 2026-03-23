@@ -1,0 +1,1229 @@
+[gd_scene load_steps=69 format=3 uid="uid://ci8iym6be4crr"]
+
+[ext_resource type="Script" uid="uid://cpybh0lujnpaw" path="res://jeu.gd" id="1_pm7t7"]
+[ext_resource type="Texture2D" uid="uid://dtm7vut25kd10" path="res://Accueil.png" id="2_3b070"]
+[ext_resource type="Texture2D" uid="uid://d18rc7yldywa0" path="res://terrainpaint1.jpg" id="2_ngu60"]
+[ext_resource type="StyleBox" uid="uid://c1qi13hry8c6v" path="res://Bo123.tres" id="3_vac35"]
+[ext_resource type="StyleBox" uid="uid://c3dynam6ay678" path="res://Bo123hover.tres" id="4_epcqq"]
+[ext_resource type="FontFile" uid="uid://bd0fen5smdpt5" path="res://digital-7.ttf" id="5_p8aip"]
+[ext_resource type="Texture2D" uid="uid://dard5snk1xof1" path="res://bonus/dosbonus.png" id="6_4xxkd"]
+[ext_resource type="Texture2D" uid="uid://bxly10lteedjn" path="res://onzedereve2.png" id="7_ygcwj"]
+[ext_resource type="Texture2D" uid="uid://745oht6rips0" path="res://bonus/vol.png" id="8_j86n7"]
+[ext_resource type="Texture2D" uid="uid://dkdwetf84sowx" path="res://bonus/corruption5.png" id="9_smpi0"]
+[ext_resource type="Texture2D" uid="uid://dkwt7u8lni1h6" path="res://bonus/boost.png" id="9_u3nl0"]
+[ext_resource type="StyleBox" uid="uid://b3afsk6r6hp6a" path="res://BONUShover.tres" id="9_ygcwj"]
+[ext_resource type="Texture2D" uid="uid://cl1rvu5o0oiqw" path="res://bonus/espionnage.png" id="10_smpi0"]
+[ext_resource type="Texture2D" uid="uid://dxv82jpo2yhi5" path="res://bonus/remplacement.png" id="11_a6blm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1umd"]
+bg_color = Color(0.25955653, 0.4537536, 0.6375507, 0.85490197)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_medkg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xuo0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24503"]
+bg_color = Color(0.050510757, 0.050510764, 0.050510712, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3192552, 0.3192553, 0.31925502, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u3nl0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pm7t7"]
+bg_color = Color(0, 0.3254902, 0.80784315, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3b070"]
+font_size = 52
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smpi0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6blm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygcwj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vac35"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj6e1"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.19607843, 0.49803922, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epcqq"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.19607843, 0.49803922, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl3wc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b70vh"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g1jh"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syf8w"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oogvh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_medkg"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shryj"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.19607843, 0.49803922, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpm7d"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.19607843, 0.49803922, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ko33"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rgu7k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwxkj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smpi0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6blm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1ysa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lk2s3"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3y47"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.19607843, 0.49803922, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2jsp"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.19607843, 0.49803922, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oogvh"]
+bg_color = Color(0.15686275, 0.3372549, 0.7254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gsui2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6t6a"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42o6l"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66bdu"]
+bg_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7wts"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3b070"]
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngu60"]
+bg_color = Color(0, 0.28627452, 0.65882355, 0.95686275)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xxkd"]
+bg_color = Color(0.23921569, 0.5529412, 0.7254902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j86n7"]
+bg_color = Color(0.23921569, 0.5529412, 0.7254902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8aip"]
+bg_color = Color(0.35134047, 0.78839254, 0.9262356, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3nl0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1ysa"]
+bg_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1.589, 1.61, 1.675, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsui2"]
+bg_color = Color(0.3137255, 0.3137255, 0.3137255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j86n7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vaqwt"]
+bg_color = Color(0.15967038, 0.15967038, 0.15967023, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j80xq"]
+bg_color = Color(0.627451, 0.06666667, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.973535, 0.9735351, 0.973535, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5qj1"]
+bg_color = Color(0.627451, 0.06666667, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.023529412, 0, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40g3p"]
+bg_color = Color(0.627451, 0.06666667, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.023529412, 0, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4xxkd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bip02"]
+bg_color = Color(0, 0.45490196, 0.14901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.972549, 0.972549, 0.972549, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yg66"]
+bg_color = Color(0, 0.45490196, 0.14901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.2784314, 0.078431375, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpder"]
+bg_color = Color(0, 0.45490196, 0.14901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.2784314, 0.078431375, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8aip"]
+
+[node name="Jeu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_pm7t7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ngu60")
+expand_mode = 1
+
+[node name="MainDuJoueur" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -248.505
+offset_top = -182.51901
+offset_right = 251.4967
+offset_bottom = -8.763184
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.04, 1.04)
+pivot_offset = Vector2(301.82, 6.865)
+alignment = 1
+
+[node name="MainAdversaire" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.0
+offset_top = 2.375
+offset_right = 384.0
+offset_bottom = 152.375
+grow_horizontal = 2
+scale = Vector2(0.73, 0.73)
+alignment = 1
+
+[node name="Tapis" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -114.0
+offset_right = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="LigneAdversaire" type="HBoxContainer" parent="Tapis"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="LigneJoueur" type="HBoxContainer" parent="Tapis"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="MessageResultat" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 61.58
+offset_top = -128.22
+offset_right = 319.16498
+offset_bottom = 71.78
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_r1umd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_medkg")
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoutonPasser" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 704.735
+offset_top = -278.0
+offset_right = 896.7347
+offset_bottom = -238.00146
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8xuo0")
+text = "NE PAS JOUER RENFORT"
+
+[node name="CompteurJoueur" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -235.0
+offset_right = -36.0
+offset_bottom = -173.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CompteurAdversaire" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 89.6
+offset_right = -36.0
+offset_bottom = 153.59991
+grow_horizontal = 0
+
+[node name="Chrono" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 160.0
+offset_bottom = 81.000015
+scale = Vector2(1.14, 1.14)
+pivot_offset = Vector2(-26.555, -9.785)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_p8aip")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_24503")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u3nl0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuDemarrage" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pm7t7")
+
+[node name="FondMenu" type="TextureRect" parent="MenuDemarrage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3b070")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MenuDemarrage"]
+layout_mode = 0
+offset_left = 287.35
+offset_top = 218.0
+offset_right = 954.35
+offset_bottom = 297.00012
+text = "MODES DE JEU"
+label_settings = SubResource("LabelSettings_3b070")
+horizontal_alignment = 1
+
+[node name="BtnBO1" type="Button" parent="MenuDemarrage"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = -25.0
+offset_right = 375.0
+offset_bottom = 28.0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_smpi0")
+text = "Match rapide - Best of 1"
+
+[node name="BtnBO3" type="Button" parent="MenuDemarrage"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.48001
+offset_top = -25.0
+offset_right = 93.52002
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_a6blm")
+text = "Classique - Best of 3"
+
+[node name="BtnBO5" type="Button" parent="MenuDemarrage"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -371.0
+offset_top = -25.0
+offset_right = -171.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ygcwj")
+text = "Marathon - Best of 5"
+
+[node name="BtnOuvrirRegles" type="Button" parent="MenuDemarrage"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -183.0
+offset_right = 33.41333
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vac35")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bj6e1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xl3wc")
+text = "Règles du Jeu"
+
+[node name="BtnQuitter" type="Button" parent="MenuDemarrage"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.929993
+offset_right = 106.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_b70vh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0g1jh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_syf8w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oogvh")
+text = "Quitter le jeu"
+
+[node name="BtnBoutique" type="Button" parent="MenuDemarrage"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 522.0
+offset_top = 527.0
+offset_right = 621.9984
+offset_bottom = 559.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_medkg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_shryj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xpm7d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ko33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rgu7k")
+text = "Boutique"
+
+[node name="TextureRect" type="TextureRect" parent="MenuDemarrage"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.99997
+offset_top = -3.0000002
+offset_right = 1142.0
+offset_bottom = 813.0
+grow_horizontal = 2
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("7_ygcwj")
+
+[node name="BtnAlbum" type="Button" parent="MenuDemarrage"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Album"
+
+[node name="CarteBonusJoueur" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 104.625
+offset_top = 443.15
+offset_right = 235.32516
+offset_bottom = 619.02563
+scale = Vector2(0.98, 0.98)
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="IndicateurBonusAdv" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 871.83
+offset_top = 37.0
+offset_right = 953.395
+offset_bottom = 154.66
+scale = Vector2(1.075, 1.075)
+texture = ExtResource("6_4xxkd")
+expand_mode = 1
+
+[node name="PanelJoker" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJoker"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 221.965
+offset_top = -77.66002
+offset_right = 243.4049
+offset_bottom = 214.33997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.705, 0.705)
+
+[node name="BtnJokerVol" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("9_ygcwj")
+theme_override_styles/pressed = ExtResource("9_ygcwj")
+theme_override_styles/hover = ExtResource("9_ygcwj")
+icon = ExtResource("8_j86n7")
+
+[node name="BtnJokerVolerBonus" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("9_ygcwj")
+theme_override_styles/pressed = ExtResource("9_ygcwj")
+theme_override_styles/hover = ExtResource("9_ygcwj")
+icon = ExtResource("9_smpi0")
+
+[node name="BtnJokerBoost" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("9_ygcwj")
+theme_override_styles/pressed = ExtResource("9_ygcwj")
+theme_override_styles/hover = ExtResource("9_ygcwj")
+icon = ExtResource("9_u3nl0")
+
+[node name="BtnJokerEspion" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("9_ygcwj")
+theme_override_styles/pressed = ExtResource("9_ygcwj")
+theme_override_styles/hover = ExtResource("9_ygcwj")
+icon = ExtResource("10_smpi0")
+
+[node name="BtnJokerRemplacement" type="Button" parent="PanelJoker/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("9_ygcwj")
+theme_override_styles/pressed = ExtResource("9_ygcwj")
+theme_override_styles/hover = ExtResource("9_ygcwj")
+icon = ExtResource("11_a6blm")
+
+[node name="BtnRetourMenu" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.5
+offset_top = -408.0
+offset_right = 120.5
+offset_bottom = -361.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_uwxkj")
+text = "RETOUR AU MENU PRINCIPAL"
+
+[node name="BtnStats" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 536.0
+offset_top = 335.0
+offset_right = 666.0
+offset_bottom = 375.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_smpi0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a6blm")
+text = "STATISTIQUES"
+
+[node name="BtnValiderEchange" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 935.0
+offset_top = 546.0
+offset_right = 1110.0005
+offset_bottom = 581.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("3_vac35")
+theme_override_styles/pressed = ExtResource("4_epcqq")
+theme_override_styles/hover = ExtResource("4_epcqq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t1ysa")
+text = "VALIDER L'ECHANGE"
+
+[node name="BtnReglesInGame" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 248.45001
+offset_right = -0.00048828125
+offset_bottom = 279.45013
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lk2s3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v3y47")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t2jsp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_oogvh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gsui2")
+text = "RÈGLES"
+
+[node name="BtnAbandonner" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -137.81494
+offset_top = -30.63501
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6t6a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_42o6l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66bdu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_m7wts")
+text = "ABANDONNER"
+
+[node name="PanelRegles" type="Panel" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3b070")
+
+[node name="VoileRegles" type="ColorRect" parent="PanelRegles"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07450981, 0.07450981, 0.07450981, 0.7921569)
+
+[node name="TabContainer" type="TabContainer" parent="PanelRegles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -497.095
+offset_top = -259.45
+offset_right = 479.79004
+offset_bottom = 279.10992
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_colors/font_hovered_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_unselected_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+theme_override_constants/side_margin = 15
+theme_override_constants/tab_separation = 14
+theme_override_constants/icon_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/outline_size = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ngu60")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_4xxkd")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_j86n7")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_p8aip")
+theme_override_styles/tab_focus = SubResource("StyleBoxFlat_u3nl0")
+current_tab = 0
+
+[node name="But du Jeu" type="Control" parent="PanelRegles/TabContainer"]
+layout_mode = 2
+mouse_filter = 1
+metadata/_tab_index = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelRegles/TabContainer/But du Jeu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.002144573
+anchor_top = 0.113188624
+anchor_right = 0.97369695
+anchor_bottom = 1.0420445
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][u]BUT DU JEU[/u][/b]
+
+- Le but du jeu est de remporter 1, 2 ou 3 manches contre l'adversaire selon le mode de jeu choisi.
+
+- Pour remporter une manche, la note cumulée des 11 meilleures cartes du joueur doit être supérieur à celle adverse.
+
+- En cas d'égalité lors d'une manche, aucun joueur ne gagne la manche."
+metadata/_edit_use_anchors_ = true
+
+[node name="Organisation" type="Control" parent="PanelRegles/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelRegles/TabContainer/Organisation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = -11.98999
+offset_bottom = -4.5349426
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[b][u]1. DÉROULEMENT[/u][/b]
+Chaque joueur joue une carte à tour de rôle.
+Celui qui a la plus grosse note remporte les cartes mises en jeu.
+En cas d'égalité, une bataille est jouée.
+
+[b][u]2. AVANTAGES DE POSTE (+2)[/u][/b]
+Si vous jouez le bon poste contre la carte adverse, vous gagnez [color=yellow]+2 points[/color] sur la confrontation entre les deux cartes :
+- [i]ATTAQUANT[/i]  bat  [i]GARDIEN[/i]
+- [i]MILIEU[/i]  bat  [i]DÉFENSEUR[/i]
+- [i]DÉFENSEUR[/i]  bat  [i]ATTAQUANT[/i]
+- [i]GARDIEN[/i]  bat  [i]MILIEU[/i]
+Cet avantage n'est pas actif lors des renforts et des batailles
+
+[b][u]3. RENFORTS[/u][/b]
+Lors d'un tour, si le premier joueur possède deux cartes de même nationalité dans sa main, qu'il joue le premier et est en situation défavorable (égalité ou défaite), il peut choisir de jouer la seconde carte de même nationalité. Les notes des deux cartes s'accumulent alors. Dans ce cas de figure où le premier joueur a placé un renfort, son adversaire a un droit de réponse et peut placer une deuxième carte de la même nationalité que la carte qu'il a joué s'il en possède une. Les avantages de poste ne s'appliquent pas lors d'un renfort.
+
+[b][u]4. BATAILLES[/u][/b]
+- Si les joueurs placés par les joueurs ont la même note, bonus compris.
+- Si chaque joueur place une carte [i]LÉGENDES[/i] alors une Bataille est automatiquement déclenchée.
+- Si les deux joueurs placent une carte de même nationalité et que l'écart de note est inférieur ou égal à 4 alors une bataille est automatiquement déclenchée.
+
+Lors d'une bataille chaque joueur tire deux cartes dans la pioche et additionne leur note à celle de sa première carte (ou de ses deux premières cartes si égalité dans un renfort). Lors du calcul du score de la bataille, les avantages de poste ainsi que le bonus boost sont pris en compte uniquement pour la première carte de chaque joueur dans ce tour. Le vainqueur de la bataille récupère toutes les cartes impliquées dans ce tour. En cas d'égalité lors de la bataille, chaque joueur récupère les cartes de son camp. 
+
+[b][u]5. CARTES BONUS[/u][/b]
+Les cartes bonus et leur utilisation sont expliquées dans l'onglet CARTES BONUS
+
+   "
+
+[node name="Cartes Bonus" type="Control" parent="PanelRegles/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelRegles/TabContainer/Cartes Bonus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = -11.505005
+offset_bottom = -8.534943
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Durant chaque manche, chaque joueur se voit distribuer un bonus aléatoire. Chaque joueur a connaissance de son propre bonus mais celui de l'adversaire reste inconnu jusqu'à son utilisation.
+
+Cet atout peut être utilisé une seule fois lors de n'importe quel tour de la manche. Un joueur ne peut utiliser son bonus qu'avant de placer sa carte joueur lors du tour.
+
+[b][u]Type de Bonus[/u][/b]
+
+- [b]Espionnage[/b] : le joueur voit la main de son adversaire pendant une durée de 5 secondes.
+
+- [b]Vol[/b] : le joueur voit 2 cartes joueur aléatoires de la main de son adversaire et peut échanger une carte de sa propre main avec l'une des 5 cartes de la main de son adversaires (ou 4 s'il est deuxième joueur lors du tour).
+
+- [b]Boost[/b] : en utilisant ce bonus, la carte joueur placée bénéficie d'un boost +3 cumulable avec le bonus de poste.
+
+- [b]Remplacement[/b] : le joueur choisit entre 1 et 4 cartes de sa main qui lui seront échangées avec autant de cartes de la pioche. Les joueurs échangés sont envoyés dans la pile de défausse.
+
+- [b]Joker[/b] : le joueur a le choix entre les 4 bonus précédemment présentés ou possède également la possibilité de voler le bonus adverse dans un cas précis (voir paragraphe : Vol de Bonus)
+
+[b][u]Vol de Bonus :[/u][/b]
+Voici les différentes situations qui peuvent se présenter et ce qu'elles permettent.
+- Si l'adversaire a déjà utilisé son bonus lors d'un tour précédent ou n'a pas encore utilisé son bonus, alors il n'est pas possible de le lui voler.
+- Si l'adversaire vient d'utiliser son bonus lors du tour en cours et que c'est à vous de jouer, vous pouvez le lui voler. Ainsi si c'est possible, le bonus de l'aversaire sera annulé et vous pourrez utiliser ce même bonus lors du tour en cours. Voici les différents cas de figure suivant le bonus adverse à voler : 
+	- Espionnage : il n'est pas possible de voler le bonus Espionnage.
+	- Vol : les cartes échangées entre les joueurs sont rendues à leur propriétaire initial sauf si la carte volée a été jouée par l'adversaire lors du même tour, auquel cas il n'est pas possible de voler le bonus adverse.
+	- Boost : le bonus sur la carte adverse est annulée et c'est la carte du voleur qui bénéficie du boost +3.
+	- Remplacement : les cartes échangées par l'adversaire lui sont rendues. Dans le cas où l'adversaire a joué une carte reçue lors de l'échange,	celle-ci n'est pas reprise mais les autres cartes impliquées dans l'échange le sont"
+
+[node name="BtnFermerRegles" type="Button" parent="PanelRegles"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 969.74
+offset_top = 601.56
+offset_right = 1044.001
+offset_bottom = 632.56
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_t1ysa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gsui2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j86n7")
+text = "FERMER"
+
+[node name="OverlayAbandon" type="ColorRect" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.10980392, 0.10980392, 0.10980392, 0.8509804)
+
+[node name="PanelAbandon" type="Panel" parent="OverlayAbandon"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.95752
+offset_top = -203.26001
+offset_right = 418.95752
+offset_bottom = 203.26001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vaqwt")
+
+[node name="AskAbandon" type="Label" parent="OverlayAbandon/PanelAbandon"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 23.51
+offset_top = 71.12
+offset_right = -25.41504
+offset_bottom = 152.12007
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "Êtes-vous sûr de vouloir abandonner la partie et retourner au menu principal ?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BtnOui" type="Button" parent="OverlayAbandon/PanelAbandon"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 243.0
+offset_top = 250.0
+offset_right = 329.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_j80xq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5qj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_40g3p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4xxkd")
+text = "OUI"
+
+[node name="BtnNon" type="Button" parent="OverlayAbandon/PanelAbandon"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 0
+offset_left = 509.0
+offset_top = 250.0
+offset_right = 595.0
+offset_bottom = 300.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bip02")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yg66")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kpder")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8aip")
+text = "NON"
+
+[connection signal="pressed" from="BoutonPasser" to="." method="_on_bouton_passer_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBO1" to="." method="_on_btn_bo_1_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBO3" to="." method="_on_btn_bo_3_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBO5" to="." method="_on_btn_bo_5_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnOuvrirRegles" to="." method="_on_btn_ouvrir_regles_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnQuitter" to="." method="_on_btn_quitter_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnBoutique" to="." method="_on_btn_boutique_pressed"]
+[connection signal="pressed" from="MenuDemarrage/BtnAlbum" to="." method="_on_btn_album_pressed"]
+[connection signal="pressed" from="CarteBonusJoueur" to="." method="_on_carte_bonus_joueur_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerVol" to="." method="_on_btn_joker_vol_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerVolerBonus" to="." method="_on_btn_joker_voler_bonus_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerBoost" to="." method="_on_btn_joker_boost_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerEspion" to="." method="_on_btn_joker_espion_pressed"]
+[connection signal="pressed" from="PanelJoker/HBoxContainer/BtnJokerRemplacement" to="." method="_on_btn_joker_remplacement_pressed"]
+[connection signal="pressed" from="BtnRetourMenu" to="." method="_on_btn_retour_menu_pressed"]
+[connection signal="pressed" from="BtnStats" to="." method="_on_btn_stats_pressed"]
+[connection signal="pressed" from="BtnValiderEchange" to="." method="_on_btn_valider_echange_pressed"]
+[connection signal="pressed" from="BtnReglesInGame" to="." method="_on_btn_regles_in_game_pressed"]
+[connection signal="pressed" from="BtnAbandonner" to="." method="_on_btn_abandonner_pressed"]
+[connection signal="pressed" from="PanelRegles/BtnFermerRegles" to="." method="_on_btn_fermer_regles_pressed"]
+[connection signal="pressed" from="OverlayAbandon/PanelAbandon/BtnOui" to="." method="_on_btn_oui_pressed"]
+[connection signal="pressed" from="OverlayAbandon/PanelAbandon/BtnNon" to="." method="_on_btn_non_pressed"]
